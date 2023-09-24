@@ -1,9 +1,7 @@
 
-import { useState } from 'react';
-import type { MenuProps } from 'antd';
-import { Menu } from 'antd';
+import ButtonPrimary from '../Button';
 
-const items: MenuProps['items'] = [
+const items = [
     {
         label: 'Inicio',
         key: 'inicio',
@@ -23,27 +21,42 @@ const items: MenuProps['items'] = [
 ];
 
 export const MenuComponent = () => {
-    const [current, setCurrent] = useState('inicio');
 
-    const onClick: MenuProps['onClick'] = (e) => {
-        console.log('click ', e);
-        setCurrent(e.key);
-    };
+    const menuContainer = {
+        display: 'flex',
+        justifyContent: 'space-between',
+        margin: '32px 132px 32px 132px'
+    }
 
-    return <>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+    const menuStyle = {
+        listStyle: 'none',
+        display: 'flex',
+        padding: '0',
+        textDecoration: 'none',
+        color: '#333',
+        fontWeight: 'bold',
+        alignItems: 'center'
+    }
+
+    const menuItem = {
+        marginRight: '10px',
+    }
+
+    return (
+        <section>
+            <div style={menuContainer}>
                 <img src="/logotipo.svg" alt="Logotipo" style={{ maxWidth: '50px' }} />
 
-                <Menu
-                    onClick={onClick}
-                    selectedKeys={[current]}
-                    mode="horizontal"
-                    items={items}
-                    style={{ display: 'flex', alignItems: 'center' }} />
+                <ul style={menuStyle}>
+                    {items.map((item) => (
+                        <li key={item?.key} style={menuItem}>
+                            <a href={item?.key}>{item?.label}</a>
+                        </li>
+                    ))}
+                </ul>
 
-                <button>clique</button> 
-                {/* TODO: ao clicar nas keys, redirecionar para uma pagina  */}
+                <ButtonPrimary name="CONTATO" color="#1E47FF" />
             </div>
-    </>
-
+        </section>
+    )
 };
