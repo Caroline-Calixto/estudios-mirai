@@ -1,6 +1,6 @@
 import ButtonPrimary from "../Button"
 
-export const BannerSection = () => {
+export const HeaderSection = () => {
     const bannerContainer = {
         display: 'flex',
         justifyContent: 'center',
@@ -25,7 +25,6 @@ export const BannerSection = () => {
         margin: '16px'
     }
 
- 
     return (
         <section style={bannerContainer}>
             <div style={bannerContent}>
