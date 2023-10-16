@@ -1,0 +1,42 @@
+.header {
+    padding: 24px 300px;
+    background-color: #FBF7EC;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+
+}
+
+.column {
+    flex: 50%;
+}
+
+.image-header {
+    width: 400px;
+    height: 400px;
+}
+
+.title {
+    color: #0F0D1C;
+    font-family: 'Work Sans';
+    font-weight: 800;
+    font-size: 32px;
+}
+/* TODO: criar styled-components dos textos */
+
+.paragraph {
+    color: #5A5A5A;
+    font-family: 'Work Sans';
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 24PX;
+    margin-bottom: 42PX;
+}
+/* TODO: criar styled-components dos textos */
+
+.hightlight {
+    color: #756BEE;
+}
+

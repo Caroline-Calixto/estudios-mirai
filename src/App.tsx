@@ -1,11 +1,11 @@
 import './App.css'
-import { AboutSection } from './components/About'
-import { ContactSection } from './components/Contact'
-import { DesignSection } from './components/Design'
-import { FooterSection } from './components/Footer'
-import { HeaderSection } from './components/Header'
+import { HeaderSection } from './components/Sections/Header'
 import { MenuComponent } from './components/Menu'
-import { WebsiteSection } from './components/Website'
+import { AboutSection } from './components/Sections/About'
+import { OurServicesSection } from './components/Sections/OurServices'
+import { OurStorySection } from './components/Sections/OurStory'
+import PortfolioSection from './components/Sections/Portfolio'
+import TestimonialsSection from './components/Sections/Testimonials'
 
 export default function App() {
 
@@ -14,10 +14,10 @@ export default function App() {
       <MenuComponent />
       <HeaderSection />
       <AboutSection />
-      <DesignSection />
-      <WebsiteSection />
-      <ContactSection />
-      <FooterSection />
+      <OurServicesSection />
+      <OurStorySection />
+      <PortfolioSection />
+      <TestimonialsSection />
     </>
   )
 }

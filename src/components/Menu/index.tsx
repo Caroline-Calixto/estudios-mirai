@@ -1,62 +1,41 @@
+import ButtonMedium from '../ButtonMedium';
+import './style.css';
 
-import ButtonPrimary from '../Button';
 
 const items = [
     {
-        label: 'Inicio',
+        label: 'Home',
         key: 'inicio',
     },
     {
-        label: 'Portfolio',
+        label: 'Case Studies',
         key: 'portfolio',
-    },
-    {
-        label: 'Sobre',
-        key: 'sobre',
     },
     {
         label: 'Blog',
         key: 'blog',
+    },
+    {
+        label: 'Services',
+        key: 'services',
     }
 ];
 
 export const MenuComponent = () => {
-
-    const menuContainer = {
-        display: 'flex',
-        justifyContent: 'space-between',
-        margin: '32px 132px 32px 132px'
-    }
-
-    const menuStyle = {
-        listStyle: 'none',
-        display: 'flex',
-        padding: '0',
-        textDecoration: 'none',
-        color: '#333',
-        fontWeight: 'bold',
-        alignItems: 'center'
-    }
-
-    const menuItem = {
-        marginRight: '10px',
-    }
-
     return (
-        <section>
-            <div style={menuContainer}>
+        <section className='menu'>
                 <img src="/logotipo.svg" alt="Logotipo" style={{ maxWidth: '50px' }} />
 
-                <ul style={menuStyle}>
+                <ul className='menu-container'>
                     {items.map((item) => (
-                        <li key={item?.key} style={menuItem}>
+                        <li key={item?.key} className='menu-item '>
                             <a href={item?.key}>{item?.label}</a>
                         </li>
                     ))}
                 </ul>
 
-                <ButtonPrimary name="CONTATO" color="#1E47FF" />
-            </div>
+                <ButtonMedium name="Contact" color="#756BEE" />
+
         </section>
     )
 };

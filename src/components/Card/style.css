@@ -1,0 +1,41 @@
+.card, .purple-card  {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 300px;
+    height: 200px;
+    align-items: center;
+    padding: 24px;
+}
+
+
+.card {
+    background-color: #fff;
+}
+
+.purple-card {
+    background-color: #756bee;
+}
+
+.purple-card p, .purple-card h2{
+    color: #fff; 
+}
+
+.card-img {
+    width: 100px;
+    height: 100px;
+}
+
+.card-description, .card-title {
+    color: #39364E
+}
+
+.card-title {
+    font-size: 18px;
+    padding: 16px;
+}
+
+.card-description {
+    font-size: 10px;
+    text-align: center;
+}
