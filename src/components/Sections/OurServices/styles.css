@@ -1,31 +1,12 @@
 .services {
-    display: flex;
-    flex-direction: column;
     background-color: #F5F4F0;
     padding: 80px 0;
+    margin-bottom: 64px;
 }
 
-.services .card-container {
+.card-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
 }
-
-.title {
-    color: #0F0D1C;
-    font-family: 'Work Sans';
-    font-weight: 800;
-    font-size: 32px;
-}
-/* TODO: criar styled-components dos textos */
-
-.paragraph {
-    color: #5A5A5A;
-    font-family: 'Work Sans';
-    font-weight: 400;
-    font-size: 16px;
-    margin-top: 24PX;
-    margin-bottom: 42PX;
-}
-/* TODO: criar styled-components dos textos */

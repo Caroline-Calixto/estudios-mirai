@@ -1,19 +1,21 @@
-import ButtonLarge from "../../ButtonLarge"
+import { Button } from "../../../styles/components/Button"
+import { Row } from "../../../styles/components/Layout"
+import { Paragraph, Title } from "../../../styles/components/Text"
 import "./style.css"
 
-export const HeaderSection = () => {
-
+export default function HeaderSection() {
     return (
-        <section className="header row">
-            <div className="column">
-                <h1 className="title">The Better Way To <span className="hightlight">Success</span> In Your Business</h1>
-                <p className="paragraph"> I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.</p>
-                <ButtonLarge name="Hire Me" color="#756BEE" />
-                {/* TODO: Adicionar redirect para section de saiba mais */}
+        <section className="header">
+            <Row>
+            <div>
+                <Title width="570px">The Better Way To <span className="hightlight">Success</span> In Your Business</Title>
+                <Paragraph width="551px">I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.</Paragraph>
+                <Button backgroundColor="#756BEE" width="176px">Hire Me</Button>
             </div>
-            <div className="column">
+            <div>
                 <img className="image-header" src="../header-img.png" alt="mulher segurando um celular" />
             </div>
+            </Row>
         </section>
     )
 }

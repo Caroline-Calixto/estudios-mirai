@@ -1,3 +1,5 @@
+import { Column, Row } from '../../../styles/components/Layout'
+import { Paragraph, Subtitle1 } from '../../../styles/components/Text'
 import BannerCard from '../../BannerCard'
 import './style.css'
 
@@ -32,15 +34,16 @@ export default function PortfolioSection() {
     return (
         // TODO: definir comportamento para ação de click
         <section className="portfolio">
-            <h2 className="title">Our Impressive Portfolio</h2>
-            <p className="description">We believe scaling startups require a radically different kind of agency</p>
+            <Column>
+                <Subtitle1>Our Impressive Portfolio</Subtitle1>
+                <Paragraph>We believe scaling startups require a radically different kind of agency</Paragraph>
 
-            <div className="work-container">
+                <div className="work-container">
                     {cardContent.map((item) => (
                         <BannerCard key={item.id} imgSrc={item.imgSrc} redirectTo={item.redirectTo} title={item.title} />
                     ))}
                 </div>
-
+            </Column>
         </section>
     )
 }

@@ -1,4 +1,5 @@
-import ButtonMedium from '../ButtonMedium';
+import { Button } from '../../styles/components/Button';
+
 import './style.css';
 
 
@@ -33,8 +34,8 @@ export const MenuComponent = () => {
                         </li>
                     ))}
                 </ul>
+                <Button backgroundColor="#756BEE">Contact</Button>
 
-                <ButtonMedium name="Contact" color="#756BEE" />
 
         </section>
     )

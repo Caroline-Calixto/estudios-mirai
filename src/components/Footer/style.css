@@ -1,0 +1,12 @@
+.footer-container {
+    display: grid;
+    background-color: #2f2e41;
+    padding: 24px;
+}
+
+.site-list, .social-media-list {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    padding: 16px;
+}

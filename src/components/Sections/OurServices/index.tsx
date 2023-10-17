@@ -1,3 +1,6 @@
+import { Button } from "../../../styles/components/Button"
+import { Column } from "../../../styles/components/Layout"
+import { Paragraph, Subtitle1 } from "../../../styles/components/Text"
 import Card from "../../Card";
 import "./styles.css";
 
@@ -26,15 +29,17 @@ export const OurServicesSection = () => {
     ];
 
     return (
-        <section className="services row">
-            <h3 className="title">I want company feature</h3>
-            <p className="paragraph">We believe scaling startups require a radically different kind of agency</p>
+        <section className="services">
+            <Column>
+            <Subtitle1>I want company feature</Subtitle1>
+            <Paragraph>We believe scaling startups require a radically different kind of agency</Paragraph>
 
-            <div className="services card-container">
+            <div className="card-container">
                 {cardContent.map((item) => (
                     <Card key={item.id} imgSrc={item.icon} title={item.title} description={item.description} />
                 ))}
             </div>
+            </Column>
         </section>
     )
 }

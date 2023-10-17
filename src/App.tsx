@@ -1,7 +1,9 @@
 import './App.css'
-import { HeaderSection } from './components/Sections/Header'
+import { FooterComponent } from './components/Footer'
 import { MenuComponent } from './components/Menu'
 import { AboutSection } from './components/Sections/About'
+import CallToAction from './components/Sections/CallToAction'
+import HeaderSection from './components/Sections/Header'
 import { OurServicesSection } from './components/Sections/OurServices'
 import { OurStorySection } from './components/Sections/OurStory'
 import PortfolioSection from './components/Sections/Portfolio'
@@ -18,6 +20,8 @@ export default function App() {
       <OurStorySection />
       <PortfolioSection />
       <TestimonialsSection />
+      <CallToAction />
+      <FooterComponent />
     </>
   )
 }
