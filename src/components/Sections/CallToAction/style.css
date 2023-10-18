@@ -1,4 +1,12 @@
 .cta-container {
     background-color: #7854F7;
-    padding: 64px;
+    padding: 80px 32px;
+}
+
+
+/* Layout para tamanho de celulares */
+@media (max-width: 375px) {
+    .cta-container {
+        padding: 32px;
+    }
 }

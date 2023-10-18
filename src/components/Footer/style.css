@@ -10,3 +10,17 @@
     gap: 32px;
     padding: 16px;
 }
+
+.copyright, .site-sections, .social-media {
+    color: #fff;
+}
+
+
+.site-sections a, .social-media a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.copyright {
+    margin-top: 24px;
+}

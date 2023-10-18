@@ -1,3 +1,4 @@
+import { Paragraph, Subtitle2 } from '../../styles/components/Text';
 import './style.css'
 
 export default function Card(props: { imgSrc: string, title: string, description?: string}) {
@@ -7,8 +8,8 @@ export default function Card(props: { imgSrc: string, title: string, description
     return (
         <div className={cardClass}>
             <img className="card-img" src={props.imgSrc} alt="" />
-            <h2 className="card-title">{props.title}</h2>
-            <p className="card-description">{props.description}</p>
+            <Subtitle2>{props.title}</Subtitle2>
+            <Paragraph>{props.description}</Paragraph>
         </div>
     )
 }

@@ -1,5 +1,7 @@
 .story {
+    display: flex;
     margin: 128px 0;
+    padding: 32px;
 }
 
 .image-story {
@@ -8,3 +10,27 @@
     margin-left: 24px;
 }
 
+.story-column {
+    display: block;
+}
+
+/* Layout para tamanho de celulares */
+@media (max-width: 375px) {
+    .story {
+        display: block;
+        margin: 64px 0;
+        text-align: center;
+    }
+
+    .image-story {
+        width: 150px;
+        height: 117px;
+        margin-left: 0;
+    }
+
+    .story-column {
+        display: grid;
+        text-align: center;
+        justify-content: center;
+    }
+}

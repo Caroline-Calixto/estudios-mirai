@@ -1,4 +1,4 @@
-import { Column, Row } from '../../../styles/components/Layout';
+import { Column } from '../../../styles/components/Layout';
 import { Paragraph, Subtitle1 } from '../../../styles/components/Text';
 import TestimonalCard from '../../TestimonalCard';
 import './style.css';

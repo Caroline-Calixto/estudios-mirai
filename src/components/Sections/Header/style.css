@@ -1,5 +1,9 @@
 .header {
-    background-color: #FBF7EC;
+    background-color: #fbf7ec;
+}
+
+.header-container {
+    padding: 32px;
 }
 
 .image-header {
@@ -8,6 +12,20 @@
 }
 
 .hightlight {
-    color: #756BEE;
+    color: #756bee;
 }
 
+/* Layout para tamanho de celulares */
+@media (max-width: 375px) {
+    .header-container {
+        max-width: 300px;
+    }
+
+    .image-header {
+        display: none;
+    }
+
+    .header-column {
+        text-align: center;
+    }
+}

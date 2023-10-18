@@ -15,5 +15,16 @@
 }
 
 .work {
-    max-width: 50%; 
-  }
+    max-width: 50%;
+}
+
+/* Layout para tamanho de celulares */
+@media (max-width: 375px) {
+    .work-container {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio {
+        padding: 32px;
+    }
+}

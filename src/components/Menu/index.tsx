@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { Button } from '../../styles/components/Button';
 
 import './style.css';
+import ContactPage from '../../pages/contato';
 
 
 const items = [
@@ -23,6 +25,12 @@ const items = [
 ];
 
 export const MenuComponent = () => {
+    const [isFormVisible, setFormVisible] = useState(false);
+
+    const openContact = () => {
+        setFormVisible(true);
+      };
+    
     return (
         <section className='menu'>
                 <img src="/logotipo.svg" alt="Logotipo" style={{ maxWidth: '50px' }} />
@@ -34,8 +42,7 @@ export const MenuComponent = () => {
                         </li>
                     ))}
                 </ul>
-                <Button backgroundColor="#756BEE">Contact</Button>
-
+                <Button backgroundColor="#756BEE" onClick={openContact}>Contact</Button>
 
         </section>
     )

@@ -10,3 +10,10 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 32px;
 }
+
+/* Layout para tamanho de celulares */
+@media (max-width: 375px) {
+    .testimonals-container {
+        grid-template-columns: 1fr;
+    }
+}

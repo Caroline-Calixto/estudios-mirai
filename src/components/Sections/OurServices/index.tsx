@@ -1,4 +1,3 @@
-import { Button } from "../../../styles/components/Button"
 import { Column } from "../../../styles/components/Layout"
 import { Paragraph, Subtitle1 } from "../../../styles/components/Text"
 import Card from "../../Card";

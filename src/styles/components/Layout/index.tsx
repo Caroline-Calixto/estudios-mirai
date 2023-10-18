@@ -1,17 +1,21 @@
 import styled from 'styled-components';
-import { media } from '../MediaQueries';
+import { device } from '../../breakpoints';
 
 export const Row = styled.div`
 display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: center;
-/* height: 100vh; */
 gap: 24px;
   
-  @media ${media.mobile}, ${media.tablet} {
-    display: flex;
+  @media ${device.mobile}, ${device.tablet} {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @media ${device.mobile} {
+    max-width: 300px;
+    align-items: center;
   }
 `;
 
@@ -22,7 +26,7 @@ align-items: center;
 justify-content: center;
 text-align: center;
   
-  @media ${media.mobile}, ${media.tablet} {
+  @media ${device.mobile}, ${device.tablet} {
     display: flex;
     flex-direction: column;
   }

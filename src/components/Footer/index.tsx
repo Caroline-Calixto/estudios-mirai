@@ -9,9 +9,7 @@ export const FooterComponent = () => {
     return (
         <footer className='footer-container'>
             <Column>
-                <div className="logotipo">
-                    <span>Estúdio Mirai</span>
-                </div>
+                    <img src="../logotipo-white.svg" alt="Logotipo" style={{ maxWidth: '50px' }} />
 
                 <div className="site-sections">
                     <ul className="site-list">
@@ -25,25 +23,21 @@ export const FooterComponent = () => {
                 <div className="social-media">
                     <ul className="social-media-list">
                         <li>
-                            <a href="https://www.linkedin.com/" target="_blank">
+                            <a href="https://www.linkedin.com/in/carolinecalixtoc/" target="_blank">
                                 <FaLinkedin />
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/" target="_blank">
+                            <a href="https://www.instagram.com/carolinecalixto.dev" target="_blank">
                                 <FaInstagram />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.tiktok.com/" target="_blank">
-                                <FaTiktok />
                             </a>
                         </li>
                     </ul>
                 </div>
 
                 <div className="copyright">
-                    &copy; {currentYear} Estúdio Mirai: Design e desenvolvimento de sites. Todos os direitos reservados.
+                    <div> &copy; {currentYear} Estúdios Mirai</div>
+                    <div>Todos os direitos reservados.</div>
                 </div>
             </Column>
         </footer>

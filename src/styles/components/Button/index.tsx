@@ -7,7 +7,7 @@ interface ButtonProps {
 }
 
 export const Button = styled.button<ButtonProps>`
-  font-size: 1em;
+  font-size: 20px;
   text-align: center;
   color:  ${(prop) => prop.color || "#FFFFFF"};
   border-radius: 5px;
@@ -15,5 +15,9 @@ export const Button = styled.button<ButtonProps>`
   background-color: ${(prop) => prop.backgroundColor};
   width: ${(prop) => prop.width};
 
+  @media (max-width: 375px) { 
+    font-size: 16px;
+    max-width: 280px;
+  }
 `;
 
