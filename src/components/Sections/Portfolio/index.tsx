@@ -32,7 +32,7 @@ export default function PortfolioSection() {
         }
     ]
     return (
-        // TODO: definir comportamento para ação de click
+        // TODO: comportamento para ação de click: redirect para medium ou behance
         <section className="portfolio">
             <Column>
                 <Subtitle1>Our Impressive Portfolio</Subtitle1>

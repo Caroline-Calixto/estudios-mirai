@@ -5,7 +5,8 @@ import { Form } from "antd";
 import Checkbox from "antd/es/checkbox/Checkbox";
 import { Button } from "../../styles/components/Button";
 
-
+// TODO: Criar componente para diminur este arquivo
+// TODO: fazer versão mobile
 export default function ContactPage() {
     const onFinish = (values: any) => {
         console.log('Success:', values);
@@ -19,7 +20,8 @@ export default function ContactPage() {
         username?: string;
         mail?: string;
         phone?: string;
-        service?: string[];
+        service?: string[]; 
+        // TODO: verificar tipagem pois o retorno mostra undefined
     };
 
     return (
@@ -37,6 +39,7 @@ export default function ContactPage() {
                             <li>domain@paypal.com</li>
                             <li>https://paypal.com</li>
                             <li>Location</li>
+                            {/* TODO: Adicionar icones */}
                         </ul>
                     </div>
                 </div>

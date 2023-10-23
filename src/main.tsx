@@ -14,6 +14,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    // criar rota para erro 404
     children: [
       {
         path: "/",
