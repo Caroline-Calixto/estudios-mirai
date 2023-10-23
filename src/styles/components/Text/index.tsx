@@ -2,13 +2,14 @@ import styled from 'styled-components';
 
 interface TextProps {
   backgroundColor?: string;
-  width?: string
+  width?: string;
+  color?: string;
 }
 
 export const Title = styled.h1<TextProps>`
   font-weight: 800;
   font-size: 64px;;
-  color: #0F0D1C;
+  color: ${(prop) => prop.color || "#0F0D1C;"};
   font-family: 'Work Sans';
   width: ${(prop) => prop.width};
 
@@ -69,9 +70,7 @@ export const Paragraph = styled.p<TextProps>`
     font-size: 10px;
     width: 240px;
     text-align: center;
-
   }
-
 `;
 
 export const Comment = styled.span`

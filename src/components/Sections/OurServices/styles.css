@@ -11,3 +11,11 @@
     justify-content: center;
     gap: 24px;
 }
+
+@media (max-width: 375px) {
+    .card-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+}

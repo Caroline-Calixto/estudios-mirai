@@ -6,20 +6,17 @@ import './style.css';
 export default function TestimonialsSection() {
     const testimonialContent = [
         {
-            comment: "Design is a bridge that connects everyone and everything",
-            imgSrc: '../icon-1.png',
+            comment: `" Design is a bridge that connects everyone and everything "`,
             username: 'Shyam Shahu Shrestha',
             position: 'UX Designer, Company Name'
         },
         {
-            comment: "Design is a bridge that connects everyone and everything",
-            imgSrc: '../icon-1.png',
+            comment:`" Design is a bridge that connects everyone and everything "`,
             username: 'Shyam Shahu Shrestha',
             position: 'UX Designer, Company Name'
         },
         {
-            comment: "Design is a bridge that connects everyone and everything",
-            imgSrc: '../icon-1.png',
+            comment: `" Design is a bridge that connects everyone and everything "`,
             username: 'Shyam Shahu Shrestha',
             position: 'UX Designer, Company Name'
         }
@@ -31,7 +28,7 @@ export default function TestimonialsSection() {
                 <Paragraph>We believe scaling startups require a radically different kind of agency.</Paragraph>
                 <div className="testimonals-container">
                     {testimonialContent.map((item) => (
-                        <TestimonalCard comment={item.comment} imgSrc={item.imgSrc} userName={item.username} position={item.position} />
+                        <TestimonalCard comment={item.comment} userName={item.username} position={item.position} />
                     ))}
                 </div>
             </Column>

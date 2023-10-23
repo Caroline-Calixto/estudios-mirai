@@ -1,0 +1,44 @@
+.form-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px;
+    background-color: #fbf7ec;
+}
+
+.form-container, .contact-board {
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(143, 143, 143, 1);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(143, 143, 143, 1);
+    box-shadow: 5px 5px 5px 0px rgba(143, 143, 143, 1);
+}
+
+.form-container {
+    display: flex;
+    padding: 64px;
+    gap: 32px;
+    background-color: #fff;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-board {
+    background-color: #756bee;
+    color: #fff;
+    padding: 32px;
+    height: 400px;
+    width: 200px;
+}
+
+.contact-form {
+    display: grid;
+    align-items: center;
+    text-align: right;
+}
+
+.list-contact li {
+    list-style: none;
+}

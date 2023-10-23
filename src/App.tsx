@@ -1,27 +1,14 @@
+import { Outlet } from 'react-router-dom'
 import './App.css'
-import { FooterComponent } from './components/Footer'
 import { MenuComponent } from './components/Menu'
-import { AboutSection } from './components/Sections/About'
-import CallToAction from './components/Sections/CallToAction'
-import HeaderSection from './components/Sections/Header'
-import { OurServicesSection } from './components/Sections/OurServices'
-import { OurStorySection } from './components/Sections/OurStory'
-import PortfolioSection from './components/Sections/Portfolio'
-import TestimonialsSection from './components/Sections/Testimonials'
+import { FooterComponent } from './components/Footer'
 
 export default function App() {
-
   return (
-    <>
+    <div className="App">
       <MenuComponent />
-      <HeaderSection />
-      <AboutSection />
-      <OurServicesSection />
-      <OurStorySection />
-      <PortfolioSection />
-      <TestimonialsSection />
-      <CallToAction />
+      <Outlet />
       <FooterComponent />
-    </>
+    </div>
   )
 }

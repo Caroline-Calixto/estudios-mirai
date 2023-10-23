@@ -2,6 +2,7 @@
     display: grid;
     background-color: #2f2e41;
     padding: 24px;
+    width: -webkit-fill-available;
 }
 
 .site-list, .social-media-list {
@@ -23,4 +24,16 @@
 
 .copyright {
     margin-top: 24px;
+}
+
+/* Layout para tamanho de celulares */
+@media (max-width: 480px) { 
+    .footer-container {
+        padding: 16px;
+    }
+
+    .site-list, .social-media-list {
+        gap: 16px;
+        padding: 8px;
+    }
 }

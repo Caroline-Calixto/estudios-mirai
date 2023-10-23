@@ -1,6 +1,6 @@
 
 import { Column } from '../../styles/components/Layout';
-import { FaLinkedin, FaInstagram, FaTiktok } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 import './style.css';
 
 export const FooterComponent = () => {
