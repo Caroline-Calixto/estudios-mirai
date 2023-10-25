@@ -3,6 +3,7 @@ import { Button } from '../../styles/components/Button';
 
 import './style.css';
 import { device } from '../../styles/breakpoints';
+import { useNavigate } from 'react-router-dom';
 
 const items = [
     {
@@ -29,7 +30,6 @@ export const MenuComponent = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
     useEffect(() => {
         const checkIsMobile = () => {
             if (window.matchMedia(device.mobile).matches) {
@@ -51,6 +51,13 @@ export const MenuComponent = () => {
         setIsMenuOpen(!isMenuOpen);
     }
 
+    const navigate = useNavigate();
+
+    const navigateHome = () => {
+        navigate('/contato');
+    };
+
+
     return (
         <>
             {
@@ -65,7 +72,7 @@ export const MenuComponent = () => {
                                 </li>
                             ))}
                         </ul>
-                        <Button backgroundColor="#756BEE">Contact</Button>
+                        <Button backgroundColor="#756BEE" onClick={navigateHome}>Contact</Button>
                     </section>
                     :
                     <section className='menu-mobile'>
@@ -86,7 +93,7 @@ export const MenuComponent = () => {
                                     ))}
                                 </ul>
                                 <br></br>
-                                <Button width="86px" backgroundColor="#756BEE">Contact</Button>
+                                <Button width="86px" backgroundColor="#756BEE" onClick={navigateHome}>Contact</Button>
                             </div>
                         )}
                     </section>

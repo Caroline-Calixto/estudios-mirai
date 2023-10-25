@@ -1,28 +1,49 @@
-import Input from "antd/es/input/Input";
+import { useEffect, useState } from "react";
 import { Paragraph, Subtitle2, Title } from "../../styles/components/Text";
 import './style.css'
-import { Form } from "antd";
-import Checkbox from "antd/es/checkbox/Checkbox";
 import { Button } from "../../styles/components/Button";
+import Input from "antd/es/input/Input";
+import { Checkbox, Form } from 'antd';
+import { addDoc, collection, getDocs, getFirestore } from "firebase/firestore";
+import { firebaseConfig } from "../../firebase";
+import { FieldType } from "../../interfaces/contact";
+import { CheckboxValueType } from "antd/es/checkbox/Group";
 
 // TODO: Criar componente para diminur este arquivo
 // TODO: fazer versão mobile
 export default function ContactPage() {
-    const onFinish = (values: any) => {
-        console.log('Success:', values);
-    };
+    const [name, setName] = useState('');
+    const [mail, setMail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [service, setService] = useState<CheckboxValueType[]>([]);
+    const [form] = Form.useForm();
+
+    function handleServiceChange(checkedValues: CheckboxValueType[]) {
+        setService(checkedValues);
+    }
 
     const onFinishFailed = (errorInfo: any) => {
         console.log('Failed:', errorInfo);
     };
 
-    type FieldType = {
-        username?: string;
-        mail?: string;
-        phone?: string;
-        service?: string[]; 
-        // TODO: verificar tipagem pois o retorno mostra undefined
-    };
+    const db = getFirestore(firebaseConfig);
+    const userColletionRef = collection(db, 'contact'); // conexão com a tabela no firebase
+
+    useEffect(() => {
+        const getUsers = async () => {
+            await getDocs(userColletionRef);
+        };
+        getUsers();
+    }, []);
+
+    async function onFinish() {
+        await addDoc(userColletionRef, { name, mail, phone, service });
+        console.log('Dados enviados com sucesso para o Firebase');
+
+        // Limpe os campos do formulário atualizando o estado
+        form.resetFields();
+        setService([]);
+    }
 
     return (
         <section className="form-page">
@@ -46,18 +67,19 @@ export default function ContactPage() {
 
                 <div className="contact-form">
                     <Form
+                        form={form}
                         name="contact"
                         initialValues={{ remember: true }}
                         autoComplete="off"
-                        onFinish={onFinish}
                         onFinishFailed={onFinishFailed}
+                        onFinish={onFinish}
                     >
                         <Form.Item<FieldType>
                             label="Name"
-                            name="username"
+                            name="name"
                             rules={[{ required: true, message: 'Please input your name!' }]}
                         >
-                            <Input />
+                            <Input onChange={e => setName(e.target.value)} />
                         </Form.Item>
 
                         <Form.Item<FieldType>
@@ -65,7 +87,7 @@ export default function ContactPage() {
                             name="mail"
                             rules={[{ required: true, message: 'Please input your e-mail!' }]}
                         >
-                            <Input />
+                            <Input onChange={e => setMail(e.target.value)} />
                         </Form.Item>
 
                         <Form.Item<FieldType>
@@ -73,7 +95,7 @@ export default function ContactPage() {
                             name="phone"
                             rules={[{ required: true, message: 'Please input your phone!' }]}
                         >
-                            <Input />
+                            <Input onChange={e => setPhone(e.target.value)} />
                         </Form.Item>
 
                         <span>What service do you need?</span>
@@ -83,16 +105,15 @@ export default function ContactPage() {
                             name="service"
                             valuePropName="checked"
                         >
-                            <Checkbox>Web Design</Checkbox>
-                            <Checkbox>App Design</Checkbox>
-                            <Checkbox>Landing Page</Checkbox>
-                            <Checkbox>Graphic Design</Checkbox>
-                            <Checkbox>Digital Marketing</Checkbox>
-                            <Checkbox>Other</Checkbox>
+                            <Checkbox.Group
+                                options={['Design', 'Ilustração', 'Landing Page', 'Social Media', 'Google ADS']}
+                                value={service}
+                                onChange={handleServiceChange} />
+
                         </Form.Item>
 
                         <Form.Item>
-                        <Button backgroundColor="#756BEE">Submit</Button>
+                            <Button backgroundColor="#756BEE">Submit</Button>
                         </Form.Item>
                     </Form>
                 </div>
