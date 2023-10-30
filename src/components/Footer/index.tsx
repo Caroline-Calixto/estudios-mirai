@@ -14,9 +14,9 @@ export const FooterComponent = () => {
                 <div className="site-sections">
                     <ul className="site-list">
                         <li><a href="/">Home</a></li>
-                        <li><a href="/case-studies">Case Studies</a></li>
+                        <li><a href="/portfolio">Portfólio</a></li>
                         <li><a href="/blog">Blog</a></li>
-                        <li><a href="/services">Services</a></li>
+                        <li><a href="/services">Serviços</a></li>
                     </ul>
                 </div>
 

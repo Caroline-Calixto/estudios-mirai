@@ -1,0 +1,23 @@
+.portfolio-page {
+    display: flex;
+    flex-direction: column;
+    padding: 64px;
+    gap: 32px;
+    background-color: #fbf7ec;
+    text-align: center;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+}
+
+@media (max-width: 375px) {
+    .portfolio-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+    }
+    
+}

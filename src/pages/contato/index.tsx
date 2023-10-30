@@ -5,12 +5,11 @@ import { Button } from "../../styles/components/Button";
 import Input from "antd/es/input/Input";
 import { Checkbox, Form } from 'antd';
 import { addDoc, collection, getDocs, getFirestore } from "firebase/firestore";
-import { firebaseConfig } from "../../firebase";
 import { FieldType } from "../../interfaces/contact";
 import { CheckboxValueType } from "antd/es/checkbox/Group";
+import { firestore } from "../../config/firebaseConfig";
 
 // TODO: Criar componente para diminur este arquivo
-// TODO: fazer versão mobile
 export default function ContactPage() {
     const [name, setName] = useState('');
     const [mail, setMail] = useState('');
@@ -26,7 +25,7 @@ export default function ContactPage() {
         console.log('Failed:', errorInfo);
     };
 
-    const db = getFirestore(firebaseConfig);
+    const db = getFirestore(firestore);
     const userColletionRef = collection(db, 'contact'); // conexão com a tabela no firebase
 
     useEffect(() => {
@@ -38,7 +37,7 @@ export default function ContactPage() {
 
     async function onFinish() {
         await addDoc(userColletionRef, { name, mail, phone, service });
-        console.log('Dados enviados com sucesso para o Firebase');
+        alert('Mensagem enviada!');
 
         // Limpe os campos do formulário atualizando o estado
         form.resetFields();
@@ -47,20 +46,24 @@ export default function ContactPage() {
 
     return (
         <section className="form-page">
-            <Title>Contact us</Title>
-            <Paragraph >Felis nunc, aliquet quam dictum senectus nunc. </Paragraph>
+            <div className="page-description">
+            <Title>Entre em contato</Title>
+            <Paragraph>Estamos ansiosos para ouvir de você e discutir como podemos ajudar a atender às suas necessidades de design, desenvolvimento web e marketing digital.</Paragraph>
+
+            </div>
 
             <div className="form-container">
                 <div className="contact-board">
-                    <Subtitle2 color="#fff">Contact Information</Subtitle2>
-                    <Paragraph color="#fff">Fill up the form and our Team will get back to you within 24 hours.</Paragraph>
+                    <Subtitle2 color="#fff">Entre em Contato Conosco</Subtitle2>
+                    <Subtitle2 color="#fff">Entre em contato conosco hoje para iniciar uma conversa.</Subtitle2>
+
                     <div className="list-contact">
                         <ul>
                             <li>+91 98765 43210</li>
-                            <li>domain@paypal.com</li>
-                            <li>https://paypal.com</li>
-                            <li>Location</li>
-                            {/* TODO: Adicionar icones */}
+                            <li>emailn@dominio.com</li>
+                            <li>https://seusite.com</li>
+                            <li>Endereço: São Paulo, Brasil</li>
+
                         </ul>
                     </div>
                 </div>
@@ -75,7 +78,7 @@ export default function ContactPage() {
                         onFinish={onFinish}
                     >
                         <Form.Item<FieldType>
-                            label="Name"
+                            label="Seu nome:"
                             name="name"
                             rules={[{ required: true, message: 'Please input your name!' }]}
                         >
@@ -83,7 +86,7 @@ export default function ContactPage() {
                         </Form.Item>
 
                         <Form.Item<FieldType>
-                            label="Mail"
+                            label="Seu e-mail:"
                             name="mail"
                             rules={[{ required: true, message: 'Please input your e-mail!' }]}
                         >
@@ -91,15 +94,14 @@ export default function ContactPage() {
                         </Form.Item>
 
                         <Form.Item<FieldType>
-                            label="Phone"
+                            label="Seu telefone:"
                             name="phone"
                             rules={[{ required: true, message: 'Please input your phone!' }]}
                         >
                             <Input onChange={e => setPhone(e.target.value)} />
                         </Form.Item>
 
-                        <span>What service do you need?</span>
-                        <div></div>
+                        <span className="service-option">Como podemos te ajudar?</span>
 
                         <Form.Item<FieldType>
                             name="service"
@@ -113,7 +115,7 @@ export default function ContactPage() {
                         </Form.Item>
 
                         <Form.Item>
-                            <Button backgroundColor="#756BEE">Submit</Button>
+                            <Button className="submit" backgroundColor="#756BEE">Enviar</Button>
                         </Form.Item>
                     </Form>
                 </div>

@@ -11,7 +11,7 @@ const items = [
         key: 'inicio',
     },
     {
-        label: 'Case Studies',
+        label: 'Portfólio',
         key: 'portfolio',
     },
     {
@@ -19,7 +19,7 @@ const items = [
         key: 'blog',
     },
     {
-        label: 'Services',
+        label: 'Serviços',
         key: 'services',
     }
 ];
@@ -72,7 +72,7 @@ export const MenuComponent = () => {
                                 </li>
                             ))}
                         </ul>
-                        <Button backgroundColor="#756BEE" onClick={navigateHome}>Contact</Button>
+                        <Button backgroundColor="#756BEE" onClick={navigateHome}>Contato</Button>
                     </section>
                     :
                     <section className='menu-mobile'>
@@ -93,7 +93,7 @@ export const MenuComponent = () => {
                                     ))}
                                 </ul>
                                 <br></br>
-                                <Button width="86px" backgroundColor="#756BEE" onClick={navigateHome}>Contact</Button>
+                                <Button width="86px" backgroundColor="#756BEE" onClick={navigateHome}>Contato</Button>
                             </div>
                         )}
                     </section>

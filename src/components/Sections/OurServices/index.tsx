@@ -9,20 +9,20 @@ export const OurServicesSection = () => {
         {
             id: 1,
             icon: '../icon-1.png',
-            title: 'Easy to purchase',
-            description: 'A complete set of tools to enable marketing teams to curate, personalize, contextualize, send, integrate and track campaigns - no coding required.'
+            title: 'Fácil de comprar',
+            description: 'Um conjunto completo de ferramentas para permitir que as equipes de marketing selecionem, personalizem, contextualizem, enviem, integrem e rastreiem campanhas - sem necessidade de codificação.'
         },
         {
             id: 2,
             icon: '../icon-2.png',
-            title: 'Strategy',
-            description: 'A complete set of tools to enable marketing teams to curate, personalize, contextualize, send, integrate and track campaigns - no coding required.'
+            title: 'Estratégia',
+            description: 'Um conjunto completo de ferramentas para permitir que as equipes de marketing selecionem, personalizem, contextualizem, enviem, integrem e rastreiem campanhas - sem necessidade de codificação.'
         },
         {
             id: 3,
             icon: '../icon-3.png',
-            title: 'Agency Web',
-            description: 'A complete set of tools to enable marketing teams to curate, personalize, contextualize, send, integrate and track campaigns - no coding required.'
+            title: 'Agência Web',
+            description: 'Um conjunto completo de ferramentas para permitir que as equipes de marketing selecionem, personalizem, contextualizem, enviem, integrem e rastreiem campanhas - sem necessidade de codificação.'
         }
 
     ];
@@ -30,8 +30,8 @@ export const OurServicesSection = () => {
     return (
         <section className="services">
             <Column>
-            <Subtitle1>I want company feature</Subtitle1>
-            <Paragraph>We believe scaling startups require a radically different kind of agency</Paragraph>
+            <Subtitle1>Uma agência</Subtitle1>
+            <Paragraph>Acreditamos que o crescimento de startups exige um tipo de agência radicalmente diferente</Paragraph>
 
             <div className="card-container">
                 {cardContent.map((item) => (

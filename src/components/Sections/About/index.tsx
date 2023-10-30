@@ -11,9 +11,10 @@ export const AboutSection = () => {
                     <img className="image-about" src="../about-img.png" alt="mulher segurando um copo" />
                 </div>
                 <div className="about-column">
-                    <Subtitle1>Let your visitors know about your features.</Subtitle1>
-                    <Paragraph>We develop enjoyable consumer experiences, from digital strategy and content to media and analysis. Leading to meaningful results and satisfied clients.</Paragraph>
-                    <Button backgroundColor="#756BEE">Our Process</Button>
+                    <Subtitle1>Nosso relacionamento com você</Subtitle1>
+                    <Paragraph>Somos uma agência de marketing digital apaixonada por transformar ideias em realidade. Combinando nossa paixão pelo design, desenvolvimento web e ilustração, criamos experiências digitais incríveis para elevar o seu negócio. </Paragraph>
+                    <Button backgroundColor="#756BEE">Explore Nossos Projetos</Button> 
+                    {/* TODO:adicionar Onclick */}
                 </div>
             </Row>
         </section >

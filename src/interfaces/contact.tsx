@@ -3,5 +3,4 @@ export  type FieldType = {
     mail: string;
     phone: string;
     service?: string[]; 
-    // TODO: verificar tipagem pois o retorno mostra undefined
 };

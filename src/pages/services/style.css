@@ -1,0 +1,8 @@
+.service-page {
+    display: flex;
+    flex-direction: column;
+    padding: 64px;
+    gap: 32px;
+    background-color: #fbf7ec;
+    text-align: center;
+}

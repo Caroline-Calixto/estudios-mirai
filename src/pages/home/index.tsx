@@ -13,11 +13,11 @@ export default function HomePage(){
         <div>
             <HeaderSection />
             <AboutSection />
-            <CallToAction />
             <OurServicesSection />
             <OurStorySection />
             <PortfolioSection />
             <TestimonialsSection />
+            <CallToAction />
         </div>
     )
 }

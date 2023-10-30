@@ -1,29 +1,14 @@
 .portfolio {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #fbf7ec;
     align-items: center;
     text-align: center;
     margin-top: 64px;
 }
 
-.work-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    margin-top: 32px;
-}
-
-.work {
-    max-width: 50%;
-}
-
 /* Layout para tamanho de celulares */
 @media (max-width: 375px) {
-    .work-container {
-        grid-template-columns: 1fr;
-    }
-
     .portfolio {
         padding: 32px;
     }

@@ -17,9 +17,9 @@ export default function HeaderSection() {
             <div className="header-container">
                 <Row>
                     <div className="header-column">
-                        <Title>The Better Way To <span className="hightlight">Success</span> In Your Business</Title>
-                        <Paragraph>I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.</Paragraph>
-                        <Button backgroundColor="#756BEE" width="176px" onClick={navigateHome}>Hire Me</Button>
+                        <Title>A jornada para seu <span className="hightlight">successo digital </span>começa aqui.</Title>
+                        <Paragraph>Em nossa jornada, auxiliamos os nossos clientes a alcançar o sucesso online, trazendo a magia da criatividade e inovação para cada projeto que empreendemos.</Paragraph>
+                        <Button backgroundColor="#756BEE" width="176px" onClick={navigateHome}>Consultoria Gratuita</Button>
                     </div>
                     <div className="header-column">
                         <img className="image-header" src="../header-img.png" alt="mulher segurando um celular" />

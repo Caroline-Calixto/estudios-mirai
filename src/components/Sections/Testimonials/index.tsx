@@ -6,26 +6,26 @@ import './style.css';
 export default function TestimonialsSection() {
     const testimonialContent = [
         {
-            comment: `" Design is a bridge that connects everyone and everything "`,
-            username: 'Shyam Shahu Shrestha',
-            position: 'UX Designer, Company Name'
+            comment: `" A equipe deste estúdio de design é realmente incrível! Eles transformaram nossa visão em uma realidade digital. Obrigada por nos ajudar a alcançar nossos objetivos "`,
+            username: ' Maria Silva',
+            position: 'XPTO Ltda'
         },
         {
-            comment:`" Design is a bridge that connects everyone and everything "`,
-            username: 'Shyam Shahu Shrestha',
-            position: 'UX Designer, Company Name'
+            comment: `" Eu estava procurando por um desenvolvedor de sites excepcional e encontrei exatamente isso aqui. Eles entregaram um site impressionante que superou todas as nossas expectativas. Ótimo trabalho! "`,
+            username: 'João Rodrigues',
+            position: 'Empresa ImaginaWeb'
         },
         {
-            comment: `" Design is a bridge that connects everyone and everything "`,
-            username: 'Shyam Shahu Shrestha',
-            position: 'UX Designer, Company Name'
+            comment: `" Estou encantada com as ilustrações que esta equipe criou para o nosso projeto. Eles capturaram perfeitamente a essência da nossa marca. Altamente recomendado! "`,
+            username: 'Ana Torres',
+            position: 'PixelArts S.A.'
         }
     ]
     return (
         <section className="testimonials">
             <Column>
-                <Subtitle1>Our Testimonial</Subtitle1>
-                <Paragraph>We believe scaling startups require a radically different kind of agency.</Paragraph>
+                <Subtitle1>Nossos depoimentos</Subtitle1>
+                <Paragraph>Ouvir nossos clientes é o que nos impulsiona a fazer o nosso melhor todos os dias. </Paragraph>
                 <div className="testimonals-container">
                     {testimonialContent.map((item) => (
                         <TestimonalCard comment={item.comment} userName={item.username} position={item.position} />

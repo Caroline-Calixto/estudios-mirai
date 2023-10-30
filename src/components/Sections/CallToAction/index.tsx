@@ -17,10 +17,11 @@ export default function CallToAction() {
         <section className="call-to-action">
             <div className="cta-container">
                 <Column>
-                    <Paragraph color='#FFFFFF'>WE CUSTOM BUILD WEBSITES TO MAKE YOUR BRAND STAND OUT FROM THE NOISE</Paragraph>
-                    <Subtitle1 color='#FFFFFF'>We start by listening and let that shape our design process, with our clients as partners</Subtitle1>
+                    <Paragraph color='#FFFFFF'>Nós criamos sites personalizados para fazer a sua marca se destacar.</Paragraph>
+                    <Subtitle1 color='#FFFFFF'>Deixe-nos criar a diferença digital para o seu negócio.
+                        Entre em contato e vamos começar!</Subtitle1>
                     <br></br>
-                    <Button backgroundColor='#FFFFFF' color='#000000' onClick={navigateContact}>Contact Us</Button>
+                    <Button backgroundColor='#FFFFFF' color='#000000' onClick={navigateContact}>Contato</Button>
                 </Column>
             </div>
 
